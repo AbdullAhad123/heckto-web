@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .timeline {
+            position: absolute;
+            top: 0;
+            left: 3px;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, #00dd55, #00b5b5);
+            opacity: 0.75;
+        }
+
+        .timeline_point::after {
+            content: "";
+            height: 24px;
+            width: 24px;
+            background: linear-gradient(109deg, #00dd3b, #00b58b);
+            position: absolute;
+            top: 50%;
+            left: -32px;
+            transform: translateY(-50%);
+            border-radius: 10em;
+            animation: shadow_scale 2.5s infinite linear;
+        }
+        
+        @keyframes shadow_scale {
+            0%{
+                box-shadow: 0 0 2px var(--secondary);
+            }
+            50% {
+                box-shadow: 0 0 10px var(--secondary);
+            }
+            100% {
+                box-shadow: 0 0 2px var(--secondary);
+            }
+        }
+
+        .videoPlayBtn {
+            height: 60px;
+            width: 60px;
+            background: var(--light);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .about_card {
+            border: 1px solid var(--secondary);
+        }
+    </style>
+    <div class="row my-4 m-0 align-items-center">
+        <div class="col-lg-7 col-md-6 col-12 my-3">
+            <h2 class="text_light fs-1 fw-bold">About us</h2>
+            <p class="fs-5 fw-semibold text_light_em fst-italic">In the digital realm, we embody this same remarkable
+                adaptability. Our team of global experts doesn't just build software; we craft intelligent solutions
+                that respond to your business ecosystem, anticipate market shifts, and evolve alongside your
+                organization</p>
+            <p class="fs-5 fw-semibold text_light_em fst-italic">We begin by understanding your environment—the market
+                conditions, competitive landscape, and unique challenges you face. Through powerful AI-driven analysis,
+                we identify opportunities for transformation. Then, like the chameleon, we adapt our solutions to
+                perfectly fit your needs, ensuring you don't just survive in your industry—you thrive.</p>
+            <button class="btn_secondary my-2 shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top ms-auto">
+                <span class="fw-semibold">Get Started</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20">
+                    <path
+                        d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="col-lg-5 col-md-6 col-12 my-3">
+        </div>
+
+        
+        <div class="col-lg-11 col-12 my-4 mx-auto">
+            <div id="about_video" class="position-relative">
+                <div class="videoPlayBtn d-flex align-items-center justify-content-center rounded-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28" fill="var(--dark)"><path d="M8,5.14V19.14L19,12.14L8,5.14Z" /></svg>
+                </div>
+                <video src="assets/img/about.mp4" poster="assets/img/intro_poster.png" class="rounded-4" width="100%"></video>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

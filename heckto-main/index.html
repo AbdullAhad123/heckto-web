@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Heckto</title>
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        nav.navbar {
+            border-radius: 100px;
+        }
+
+        .scrollIndicator {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        #hero {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(to top, #181818, #121212c0, transparent);
+        }
+
+
+        #intro {
+            background: linear-gradient(0deg, var(--dark), #181818);
+        }
+
+        #introContent {
+            height: fit-content;
+            width: 100%;
+            background: url('assets/img/bg_shining.webp') center, linear-gradient(45deg, #bed18d, #D8E9A8);
+            background-size: cover;
+            background-blend-mode: color-dodge;
+        }
+
+    </style>
+    
+    <div id="content">
+        <section id="nav">
+            <div class="container-lg wrapper mt-2">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/web_logo.png" width="140" alt="heckto logo">
+                        </a>
+                        <div class="d-flex align-items-center gap-2 ms-auto">
+                            <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                                <span class="fw-semibold">Contact us</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
+                            </button>
+                            <button class="btn_dark_gray shiny_btn d-inline-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#navbarMenu">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="25" width="25"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <header class="">
+            <canvas id="canvas"></canvas>
+            <section id="hero" class="position-relative z-1 text-center py-3 d-flex align-items-center justify-content-center">
+                <div class="container-lg wrapper">
+                    <h1 class="text_white display-4 fw-bolder overflow-hidden"><span class="d-inline-block">Transform,</span> <br> <span class="d-inline-block">Adapt &</span> <span class="d-inline-block">Innovate</span></h1>
+                    <p class="text_light_em fw-medium fs-5 mb-3 overflow-hidden">
+                        <span class="d-inline-block">Welcome to Heckto! Where AI meets adaptability in a rapidly evolving digital landscape.</span>
+                    </p>
+                    <div id="cta_link">
+                        <a href="#" class="btn_secondary_outline shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                            <span class="fw-semibold">Begin Your Evolution</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
+                        </a>    
+                    </div>
+                </div>
+            </section>
+            <div class="scrollIndicator">
+                <div class="scrollIndicatorCont">
+                    <span class="scroll-icon mx-auto">
+                        <span class="scroll-icon__wheel-outer">
+                            <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                    </span>
+                    <span class="d-block text_light_em fs_7 fw-medium mx-auto">Scroll to Explore</span>
+                </div>
+            </div>
+        </header>
+
+        <style>
+            #intro .intro_shade {
+                position: absolute;
+                bottom: -180px;
+                left: -70px;
+                height: 300px;
+                width: 300px;
+                border-radius: 100em;
+                filter: blur(120px);
+                z-index: 0;
+                background: linear-gradient(51deg, #72dd00, #d1e2a0, #c94d14);
+                opacity: 0.5;
+            }
+        </style>
+        <section id="intro" class="py-2 pb-5 position-relative">
+            <div class="container-lg wrapper position-relative z-1">
+                <div id="introContent" class="rounded-4 p-4">
+                    <div class="col-lg-9 col-md-11 col-12 my-2">
+                        <h2 class="text_dark fw-bold">We don't just respond to change—we anticipate it!</h2>
+                        <p class="text_dark_em fs_5 fw-medium">Heckto harnesses the power of artificial intelligence to create solutions that evolve with your business needs. Like our chameleon symbol, we blend seamlessly into your environment, delivering custom technology that adapts to your unique challenges.</p>
+                    </div>
+                    <div class="col-12 my-2 text-end">
+                        <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                            <span class="fw-semibold">Learn more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>`
+            <div class="intro_shade"></div>
+        </section>
+
+        <section id="about" class="mt-5">
+            <div class="container-lg wrapper">
+                <div class="row align-items-end">
+                    <div class="col-lg-7 col-md-12 col-12 my-4 py-lg-4">
+                        <h2 class="text_light fs-1 fw-bold">About us</h2>
+                        <p class="text_light_em fs-5 fst-italic fw-medium mb-2">In the digital realm, we embody this same remarkable adaptability. Our team of global experts doesn't just build software; we craft intelligent solutions that respond to your business ecosystem, anticipate market shifts, and evolve alongside your organization.</p>
+                        <p class="text_light_em fs-5 fst-italic fw-medium">We begin by understanding your environment—the market conditions, competitive landscape, and unique challenges you face. Through powerful <span class="fw-semibold text_highlight">AI-driven analysis</span>, we identify opportunities for transformation. Then, like the chameleon, we adapt our solutions to perfectly fit your needs, ensuring you don't just survive in your industry—you thrive.</p>
+                        <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top mt-2 mb-3">
+                            <span class="fw-semibold">Get started</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-12 mt-3">
+                        <img src="assets/img/heckto_chameleon.png" class="about_image" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            #aboutVideo {
+                min-height: 100vh;
+                padding: 2rem 0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            #aboutVideo img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                filter: brightness(0.5);
+            }
+
+            #playVideo {
+                height: 56px;
+                width: 56px;
+                background: var(--light_em);
+                color: var(--dark);
+                fill: var(--dark);
+                border-radius: 100rem;
+                border: none;
+                outline: none;
+                box-shadow: 0px 0px 10px 2px #00000054;
+                transform: scale(1);
+                transition: transform 0.25s;
+            }
+            
+            #playVideo:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 12px 2px #00000051;
+            }
+
+            .videoPopupContainer {
+                padding-top: 51.25%;
+                width: 100%;
+                position: relative;
+            }
+
+            .videoPopupContainer video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        </style>
+        <section id="aboutVideo" class="d-flex align-items-center justify-content-center">
+            <img src="assets/img/about_poster.png" alt="">
+            <div class="container-lg wrapper position-relative z-1 text-center">
+                <button id="playVideo" class="shiny_btn d-inline-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#videoPopup">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M8,5.14V19.14L19,12.14L8,5.14Z" /></svg>
+                </button>
+            </div>
+        </section>
+
+        <style>
+            #services .intro_shade {
+                position: absolute;
+                top: -100px;
+                right: -50px;
+                height: 320px;
+                width: 320px;
+                border-radius: 100em;
+                filter: blur(120px);
+                z-index: -1;
+                background: linear-gradient(51deg, #72dd00, #d1e2a0, #c94d14);
+                opacity: 0.5;
+            }
+
+            .heading_line {
+                height: 5px;
+                width: 160px;
+                border-radius: 2em;
+
+            }
+
+            .services_card {
+                position: relative;
+                height: 500px;
+                width: auto;
+                overflow: hidden;
+            }
+
+            .services_card img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .services_content {
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(180deg, transparent, #0000007b, #000000b7);
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+        <section id="services" class="my-5 py-4 position-relative">
+            <div class="container-lg wrapper">
+                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                    <h2 class="text_light display-6 fw-bolder my-2"><span class="text_highlight">Digital Evolution</span><br> through Intelligent Adaptation</h2>
+                    <button class="btn_light_outline d-inline-flex align-items-center gap-1 ms-auto my-2">
+                        <span class="fw-medium">View all services</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="services_card rounded-3 shadow">
+                            <img src="assets/img/ai_automation.jpg" alt="">
+                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
+                                <div class="mb-1">
+                                    <p class="text_highlight m-0 fw-semibold">Automate, Optimize & Revolutionize</p>
+                                    <h3 class="text_white fw-bold">AI Automation Creation</h3>
+                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="services_card rounded-3 shadow">
+                            <img src="assets/img/website_development.jpg" alt="">
+                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
+                                <div class="mb-1">
+                                    <p class="text_highlight m-0 fw-semibold">Websites that work as hard as you do</p>
+                                    <h3 class="text_white fw-bold">Website Development</h3>
+                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="services_card rounded-3 shadow">
+                            <img src="assets/img/ai_automation.jpg" alt="">
+                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
+                                <div class="mb-1">
+                                    <p class="text_highlight m-0 fw-semibold">Strategic Digital Engagement</p>
+                                    <h3 class="text_white fw-bold">Social Media Marketing</h3>
+                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro_shade"></div>
+        </section>
+
+        <!-- modal -->
+        <div class="modal fade" id="videoPopup" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="videoPopupLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content p-0 bg-transparent border-0 rounded-3 overflow-hidden">
+                    <button type="button" id="stopVideo" class="btn_transparent shadow-none d-inline-flex align-items-center justify-content-center position-absolute top-0 end-0 m-1 z-1" data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="22" width="22"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
+                    </button>
+                    <div class="videoPopupContainer">
+                        <video src="assets/img/hackto_about.mp4" controls="true"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="offcanvas offcanvas-top bg_dark overflow-y-auto pb-4" data-bs-scroll="false" data-bs-backdrop="static" tabindex="-1" id="navbarMenu" aria-labelledby="navbarMenuLabel">
+        <img src="assets/img/heckto_icon.png" class="bg_icon" width="420" alt="">
+        <div class="container-lg wrapper mt-2 position-relative z-1">
+            <div class="offcanvas-header">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/web_logo.png" width="140" alt="heckto logo">
+                </a>
+                <div class="d-flex align-items-center gap-2 ms-auto">
+                    <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                        <span class="fw-semibold">Contact us</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
+                    </button>
+                    <button class="btn_dark_gray ms-auto shiny_btn d-inline-flex align-items-center" data-bs-dismiss="offcanvas" aria-label="Close" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row m-0 mt-md-2">
+                    <div class="col-md-7 col-12">
+                        <ul class="list-unstyled">
+                            <li class="navbar_item mb-4">
+                                <a href="#" class="navbar_link fw-bold fs-3">Home</a>
+                            </li>
+                            <li class="navbar_item mb-4">
+                                <a href="#" class="navbar_link fw-bold fs-3">Expertise</a>
+                            </li>
+                            <li class="navbar_item mb-4">
+                                <a href="#" class="navbar_link fw-bold fs-3">About</a>
+                            </li>
+                            <li class="navbar_item mb-4">
+                                <a href="#" class="navbar_link fw-bold fs-3">Portfolio</a>
+                            </li>
+                            <li class="navbar_item mb-4">
+                                <a href="#" class="navbar_link fw-bold fs-3">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 col-12 d-flex align-items-end">
+                        <div class="mb-4">
+                            <h3 class="text_light fw-bold mb-2">Need Assistance?</h3>
+                            <p class="text_light_em fw-medium">Our team is here to help you. Get in touch with us</p>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="btn_dark_gray shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                                    <span class="fw-semibold">Email us</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
+                                </button>
+                                <a href="#" class="link_light_hover fw-semibold d-inline-flex align-items-center text-decoration-none">
+                                    <span>+44 321 4567890</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="canvas.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script>
+        $(window).on('load scroll', function () {
+            const scrolled = $(window).scrollTop();
+            if (scrolled > 25) {
+                $(".scrollIndicator").fadeOut()
+            } else {
+                $(".scrollIndicator").fadeIn()
+            }
+        })
+
+        $("#playVideo").on('click', function () {
+            const video = $(".videoPopupContainer video")[0];
+            if (video.paused) {
+                video.play();
+            } 
+        });
+        
+        $("#stopVideo").on('click', function () {
+            const video = $(".videoPopupContainer video")[0];
+            if (video.play) {
+                video.pause();
+            } 
+        })
+
+    </script>
+</body>
+
+</html>
