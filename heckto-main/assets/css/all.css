@@ -35,7 +35,10 @@ html {
 
 body {
     background: var(--black) !important;
+    cursor: url('../img/logo.png'), auto !important;
+
 }
+
 
 .material-icons {
     font-size: 20px !important;

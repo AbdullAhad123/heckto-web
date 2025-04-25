@@ -12,6 +12,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .text_secondary_gradient {
+            background: linear-gradient(106deg,#72dd00 9.18%,#d2ffac 91.98%);
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .text_light_gradient {
+            background: linear-gradient(106deg, #ffffff 9.18%, #ddddddde 91.98%);
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .aboutCard {
+            height: auto;
+            width: auto;
+            border: 1px solid #dedede2f;
+            background: #00000083;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aboutCard::after {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -100px;
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+            background: linear-gradient(180deg, #ffc107, var(--dark_secondary));
+            z-index: 0;
+            opacity: 0.1;
+            filter: blur(70px);
+        }
+
+        .aboutImg {
+            height: 200px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .title_badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            border-radius: 40px;
+            padding: 0.75rem 1.25rem;
+            background: var(--dark);
+            border: 1px solid #72dd0027;
+        }
+        .title_dot {
+            height: 10px;
+            width: 10px;
+            background: linear-gradient(-45deg, var(--secondary), var(--dark_secondary));
+            border-radius: 50%;
+        }
+        
+    </style>
 </head>
 <body>
 
@@ -122,10 +186,56 @@
             <div class="overview_layer"></div>
         </section>
 
-        <section>
-            <div class="container-lg wrapper">
-                <h2 class="text_white display-2 fw-bold">A team of Super experts, <br> We don't just respond to change—we anticipate it</h2>
+        <section id="about" class="my-5 pb-lg-5 pb-4 ">
+            <div class="container-lg wrapper pageContent position-relative">
+                <h2 class="text_white display-2 sectionHeading fw-bold overflow-hidden"><span class="text_secondary_gradient heading_one d-inline-block">A team of Super experts,</span> <br> <span class="text_light_gradient heading_two d-inline-block">We don't just respond to change—we anticipate it</span></h2>
+                <div class="row my-4">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="aboutCard rounded-4 p-m-4 p-3 py-4">
+                            <div class="position-relative z-1">
+                                <div class="aboutImg">
+                                    <img src="assets/img/think_icon.png" class="mb-3" width="60" height="60" alt="">
+                                </div>
+                                <h3 class="text-white fs-4 mb-1">Think</h3>
+                                <p class="text_light_em fw-normal fs_5">We start by conceptualizing your project with a clear vision. Every idea is crafted carefully to meet your needs and goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="aboutCard rounded-4 p-m-4 p-3 py-4">
+                            <div class="position-relative z-1">
+                                <div class="aboutImg">
+                                    <img src="assets/img/design.png" class="mb-3" width="60" height="60" alt="">
+                                </div>
+                                <h3 class="text-white fs-4 mb-1">Create</h3>
+                                <p class="text_light_em fw-normal fs_5">We bring that vision to life, transforming ideas into reality. Our creative process ensures that every detail aligns with your objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="aboutCard rounded-4 p-m-4 p-3 py-4">
+                            <div class="position-relative z-1">
+                                <div class="aboutImg">
+                                    <img src="assets/img/develop.png" class="mb-3" width="60" height="60" alt="">
+                                </div>
+                                <h3 class="text-white fs-4 mb-1">Deliver</h3>
+                                <p class="text_light_em fw-normal fs_5">With everything in place, we’re ready to deliver your project. We ensure timely, high-quality execution so you can see your vision in action.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="services_head" class="my-5">
+            <div class="container-lg wrapper pageContent position-relative">
+                <div class="title_badge mb-3">
+                    <span class="title_dot"></span>
+                    <span class="fs_5 text_light">Services</span>
+                </div>
+                <h2 class="text_light_gradient display-2 fw-bold">Digital Evolution Through Intelligent Adaptation</h2>
+            </div>
+
         </section>
 
 
@@ -197,17 +307,50 @@
         </section>
 
 
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, minima eligendi. Natus, tenetur harum iusto iure nobis quia perspiciatis culpa esse corrupti dolores sunt reprehenderit debitis asperiores? Officiis, at enim?
+
 
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="canvas.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/gsap.js"></script>
     <script>
-        
+        var heading_tl = gsap.timeline();
+
+        heading_tl.from(".sectionHeading span", {
+            y: 250,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.3,
+            ScrollTrigger: {
+                trigger: "#about",
+
+            }
+        })
+
     </script>
 </body>
 

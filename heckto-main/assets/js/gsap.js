@@ -144,15 +144,12 @@ closeNav.addEventListener("click", function () {
 
 
 // overview 
-var slider_tl = gsap.timeline();
-
-slider_tl.from(".overview_slider", {
+hero_tl.from(".overview_slider", {
     opacity: 0,
     duration: 1,
-    delay: 0.75
 })
 
-slider_tl.to(".overview_slides", {
+hero_tl.to(".overview_slides", {
     transform: "translateX(-100%)",
     duration: 140,
     ease: "none",
