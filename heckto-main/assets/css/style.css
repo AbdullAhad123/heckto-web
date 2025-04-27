@@ -189,3 +189,36 @@ nav.navbar {
     background: transparent;
     z-index: 2;
 }
+
+/* about  */
+.aboutCard {
+    height: auto;
+    width: auto;
+    border: 1px solid #dedede2f;
+    background: #00000083;
+    position: relative;
+    overflow: hidden;
+}
+
+.aboutCard::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(180deg, #ffc107, var(--dark_secondary));
+    z-index: 0;
+    opacity: 0.1;
+    filter: blur(70px);
+}
+
+.aboutImg {
+    height: 200px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

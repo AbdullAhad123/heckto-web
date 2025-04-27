@@ -155,3 +155,57 @@ hero_tl.to(".overview_slides", {
     ease: "none",
     repeat: -1,
 })
+
+// portfolio 
+
+$(".portfolio_image").on("mouseenter", function () {
+    const img = $(this).find('img');
+
+    // Kill this element's leave animation
+    const leaveAnimation = $(this).data('leaveAnimation');
+    if (leaveAnimation) {
+        leaveAnimation.kill();
+        $(this).removeData('leaveAnimation');
+    }
+
+    // Kill this element's enter animation if already running
+    const enterAnimation = $(this).data('enterAnimation');
+    if (enterAnimation) {
+        enterAnimation.kill();
+    }
+
+    const imgSize = $(img).attr('height');
+    const transformSize = imgSize - 600;
+    const duration = imgSize / 600;
+
+    const newEnterAnim = gsap.to(img, {
+        y: `-${transformSize}px`,
+        duration: duration,
+        ease: "power2.out"
+    });
+
+    $(this).data('enterAnimation', newEnterAnim);
+});
+
+$(".portfolio_image").on("mouseleave", function () {
+    const img = $(this).find('img');
+
+    // Kill this element's enter animation if running
+    const enterAnimation = $(this).data('enterAnimation');
+    if (enterAnimation) {
+        enterAnimation.kill();
+        $(this).removeData('enterAnimation');
+    }
+
+    const imgSize = $(img).attr('height');
+    const duration = imgSize / 600;
+    const halfDuration = duration / 2;
+
+    const newLeaveAnim = gsap.to(img, {
+        y: "0%",
+        duration: halfDuration,
+        ease: "power2.in"
+    });
+
+    $(this).data('leaveAnimation', newLeaveAnim);
+});
