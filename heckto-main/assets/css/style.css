@@ -192,7 +192,7 @@ nav.navbar {
 
 /* about  */
 .aboutCard {
-    height: auto;
+    height: 100%;
     width: auto;
     border: 1px solid #dedede2f;
     background: #00000083;
@@ -221,4 +221,137 @@ nav.navbar {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+/* portfolio  */
+
+.portfolio_card {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+
+.portfolio_image {
+    height: 520px;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio_image img {
+    transform: translateY(0);
+    width: 100%;
+    filter: brightness(0.95);
+}
+
+.portfolio_content {
+    background: #00000085;
+    border: 1px solid #dedede23;
+}
+
+.arrow_icon {
+    height: 38px;
+    width: 38px;
+    background: var(--secondary);
+    color: var(--dark);
+    border-radius: 50%;
+    transition: 0.25s;
+    transform: rotate(45deg);
+}
+
+.portfolio_content:hover .arrow_icon {
+    background: var(--dark_secondary);
+    transform: rotate(0);
+}
+
+.portfolio_fade_right {
+    z-index: 3;
+    perspective: 2000px;
+    background-image: linear-gradient(270deg, #000, #0000);
+    width: 270px;
+    display: none;
+    position: absolute;
+    right: 0;
+    inset: 0% 0% 0% auto;
+}
+
+.portfolio_fade_left {
+    z-index: 3;
+    background: linear-gradient(270deg, #01010100, #000);
+    width: 291px;
+    display: none;
+    position: absolute;
+    left: 0;
+    inset: 0% auto 0% 0%;
+}
+
+@media (min-width: 2200px) {
+
+    .portfolio_fade_left,
+    .portfolio_fade_right {
+        display: block;
+    }
+
+}
+
+.portfolio_wrapper {
+    max-width: 2400px;
+    position: relative;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.portfolio_card_item {
+    min-width: 460px;
+}
+
+/* services  */
+.service_card {
+    height: auto;
+    width: auto;
+    background: #00000085;
+    border: 1px solid #dedede23;
+    overflow: hidden;
+}
+
+.services_img {
+    position: relative;
+}
+
+.services_img .faded_effect {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #00000000, #00000000, #000000c7);
+    position: absolute;
+    top: 0
+}
+
+.services_content {
+    background: #000000c7;
+}
+
+/* contact  */
+#contactContainer {
+    height: auto;
+    width: auto;
+    background: url(assets/img/bg_shining.webp), #0c0c0c;
+    background-size: cover;
+}
+
+#contactContainer .badgeItem {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contactInput {
+    padding: 1.5rem 1.25rem !important;
+    background: #1212128a !important;
+    border: 1px solid #1212128a !important;
+    color: var(--white) !important;
+}
+
+.contactInput::placeholder {
+    color: var(--light_em) !important;
 }

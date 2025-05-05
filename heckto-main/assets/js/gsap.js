@@ -62,6 +62,20 @@ silder.addEventListener("mouseleave", function () {
     })
 });
 
+var footer = document.querySelector("footer")
+footer.addEventListener("mouseenter", function () {
+    gsap.to(".gradient_cursor", {
+        scale: 0.15,
+        opacity: 1
+    })
+});
+footer.addEventListener("mouseleave", function () {
+    gsap.to(".gradient_cursor", {
+        scale: 1,
+        opacity: 0.5
+    })
+});
+
 
 // nav timeline 
 // openNav
@@ -175,8 +189,8 @@ $(".portfolio_image").on("mouseenter", function () {
     }
 
     const imgSize = $(img).attr('height');
-    const transformSize = imgSize - 600;
-    const duration = imgSize / 600;
+    const transformSize = imgSize - 520;
+    const duration = imgSize / 520;
 
     const newEnterAnim = gsap.to(img, {
         y: `-${transformSize}px`,
@@ -198,7 +212,7 @@ $(".portfolio_image").on("mouseleave", function () {
     }
 
     const imgSize = $(img).attr('height');
-    const duration = imgSize / 600;
+    const duration = imgSize / 520;
     const halfDuration = duration / 2;
 
     const newLeaveAnim = gsap.to(img, {
@@ -209,3 +223,18 @@ $(".portfolio_image").on("mouseleave", function () {
 
     $(this).data('leaveAnimation', newLeaveAnim);
 });
+
+// section heading 
+gsap.registerPlugin();
+var heading_tl = gsap.timeline();
+
+heading_tl.from(".sectionHeading span", {
+    y: 250,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.3,
+    ScrollTrigger: {
+        trigger: "#about",
+
+    }
+})

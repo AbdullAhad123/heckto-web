@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter Animation on Scroll</title>
+  <style>
+    .counter {
+      font-size: 2rem;
+      margin: 100vh 0; /* So that scrolling is needed */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="counter" data-target="1500">0</div>
+  <div class="counter" data-target="3000">0</div>
+
+  <script>
+    function animateCounter(el, start = 0, duration = 2000) {
+      const end = parseInt(el.getAttribute('data-target'), 10);
+      let startTime = null;
+
+      function update(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const value = Math.floor(start + (end - start) * (progress / duration));
+        el.textContent = value.toLocaleString();
+        if (progress < duration) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = end.toLocaleString();
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      document.querySelectorAll('.counter').forEach(counter => {
+        observer.observe(counter);
+      });
+    });
+  </script>
+
+</body>
+</html>

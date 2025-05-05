@@ -35,7 +35,6 @@ html {
 
 body {
     background: var(--black) !important;
-    cursor: url('../img/logo.png'), auto !important;
 
 }
 
@@ -160,11 +159,12 @@ body {
 /* text  */
 
 .text_secondary_gradient {
-    background: linear-gradient(106deg,#72dd00 9.18%,#d2ffac 91.98%);
+    background: linear-gradient(106deg, #72dd00 9.18%, #d2ffac 91.98%);
     color: transparent;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
 .text_light_gradient {
     background: linear-gradient(106deg, #ffffff 9.18%, #ddddddde 91.98%);
     color: transparent;
@@ -338,6 +338,24 @@ button.shiny_btn svg {
     fill: var(--white) !important;
 }
 
+.btn_dark {
+    background: var(--dark) !important;
+    color: var(--light_gray);
+    fill: var(--light_gray);
+    padding: 0.65rem 1.25rem !important;
+    text-decoration: none !important;
+    border: 1px solid var(--dark);
+    border-radius: 100px;
+    box-shadow: 0px 0px 8px 0px #00000036;
+    transition: 0.25s;
+}
+
+.btn_dark:hover {
+    background: var(--black) !important;
+    color: var(--white) !important;
+    fill: var(--white) !important;
+}
+
 .btn_transparent {
     background: transparent !important;
     color: var(--light_em);
@@ -473,9 +491,106 @@ button.shiny_btn svg {
     background: #0000008e;
     border: 1px solid #72dd0027;
 }
+
 .title_dot {
     height: 10px;
     width: 10px;
     background: linear-gradient(-45deg, var(--secondary), var(--dark_secondary));
     border-radius: 50%;
+}
+
+/* footer  */
+footer {
+    height: 700px;
+    background: linear-gradient(145deg, #B9F680, #ccff9d);
+    position: relative;
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    z-index: 2;
+}
+
+.footer_heading {
+    font-size: 16vw;
+    color: var(--black);
+    line-height: 0.8;
+}
+
+.footer_link.fs_4 {
+    font-size: 1.45rem !important;
+}
+
+.footer_link {
+    position: relative;
+}
+
+.footer_link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--dark);
+    transition: 0.3s;
+}
+
+.footer_link:hover::after {
+    width: 100%;
+}
+
+footer #scrollToTop {
+    min-height: 55px !important;
+    min-width: 55px !important;
+    padding: 0 !important;
+}
+
+.footer_input {
+    background: transparent !important;
+    border: none;
+    border-bottom: 2px solid var(--deep_dark) !important;
+    padding: 1rem 0.15rem !important;
+    line-height: 1 !important;
+}
+
+.footer_input:focus {
+    border: none;
+    box-shadow: none !important;
+}
+
+#subscribe_btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.btn_loading {
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.footerSocialLink {
+    fill: var(--dark);
+    transition: 0.3s;
+}
+
+.footerSocialLink:hover {
+    fill: var(--black);
 }

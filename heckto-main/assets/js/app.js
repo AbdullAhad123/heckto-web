@@ -12,23 +12,44 @@ $(window).on('load resize', function () {
     }
 });
 
-// function break_heading() {
-//     var heading1 = $(".sectionHeading .heading_one").text().split("");
-//     var heading2 = $(".sectionHeading .heading_two").text().split("");
+var cardWidth = $(".portfolio_card").width();
+var transformSize = cardWidth * 5.5;
+gsap.to(".portfolio_section .portfolioCardsContainer", {
+    duration: 4,
+    x: `-${transformSize}px`,
+    scrollTrigger: {
+        trigger: ".portfolio_section",
+        pin: true,
+        scrub: 2,
+    }
+});
 
-//     // Clear the existing content
-//     $(".heading_one").html("");
+$("#scrollToTop").click(function () {
+    $(window).scrollTop(0)
+})
 
-//     // Loop through heading1 and wrap each letter in a <span>
-//     heading1.forEach(letter => {
-//         $(".heading_one").append(`<span>${letter}</span>`);
-//     });
+$(window).on('load', function () {
+    $("#scrollToTop").click();
+})
 
-//     // Agar aapko heading2 pe bhi same logic apply karna ho
-//     $(".heading_two").html("");  // Clear existing content for heading2
-//     heading2.forEach(letter => {
-//         $(".heading_two").append(`<span>${letter}</span>`);
-//     });
-// }
 
-// break_heading();
+$("#subscribe_btn").on('click', function () {
+    const email = $("#subscribeInput").val();
+    const errBox = $("#subscribeInputErr");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const button = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" class="btn_loading"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg>`
+
+    if (email == "") {
+        $(errBox).removeClass('d-none').text('Invalid Email Address');
+    } else if (!emailRegex.test(email)) {
+        $(errBox).removeClass('d-none').text('Invalid Email Address');
+    } else {
+        $(errBox).addClass('d-none').text('');
+    }
+
+    if (email && emailRegex.test(email)) {
+        $(this).html(button);
+        $("#submitEmailForm").click();
+    }
+
+})
