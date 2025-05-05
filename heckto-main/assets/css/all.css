@@ -571,14 +571,15 @@ footer #scrollToTop {
 
 .footer_input {
     background: transparent !important;
-    border: none;
+    border: none !important;
     border-bottom: 2px solid var(--deep_dark) !important;
     padding: 1rem 0.15rem !important;
     line-height: 1 !important;
+    outline: none !important;
 }
 
 .footer_input:focus {
-    border: none;
+    border-color: 2px solid transparent !important;
     box-shadow: none !important;
 }
 
