@@ -224,17 +224,180 @@ $(".portfolio_image").on("mouseleave", function () {
     $(this).data('leaveAnimation', newLeaveAnim);
 });
 
-// section heading 
-gsap.registerPlugin();
-var heading_tl = gsap.timeline();
+// about 
+var heading_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#about",
+        start: "top 65%",
+    }
+});
 
-heading_tl.from(".sectionHeading span", {
+heading_tl.from("#about .sectionHeading span", {
     y: 250,
     opacity: 0,
+    duration: 0.75,
+    stagger: 0.3,
+    ease: "power3.out" // animation ko smooth banata hai
+});
+
+heading_tl.from(".aboutCardCont .col-12",{
+    opacity: 0,
+    y: 50,
+    stagger: 0.2,
+    duration: 0.8
+})
+
+// portfolio 
+var heading_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#portfolio",
+        start: "top 30%",
+    }
+});
+
+heading_tl.from("#portfolio .title_badge", {
+    scale: 0,
+    duration: 0.3,
+    ease: "back.out"
+});
+
+heading_tl.from("#portfolio .sectionHeading", {
+    x: -250,
+    opacity: 0,
+    duration: 0.75,
+    stagger: 0.3,
+    ease: "power3.out"
+});
+
+heading_tl.from("#portfolio .portfolio_section", {
+    opacity: 0,
+    y: 100,
+    duration: 0.95,
+    ease: "power3.out"
+});
+
+
+// services 
+var heading_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#services_head",
+        start: "top 30%",
+    }
+});
+
+heading_tl.from("#services_head .title_badge", {
+    scale: 0,
+    duration: 0.3,
+    ease: "back.out"
+});
+
+heading_tl.from("#services_head .sectionHeading span", {
+    y: 250,
+    opacity: 0,
+    duration: 0.75,
+    ease: "power3.out"
+});
+
+heading_tl.from(".servicesCardCont .col-12", {
+    y: 90,
+    opacity: 0,
+    duration: 0.75,
+    stagger: 0.3,
+    ease: "power2.out"
+});
+
+heading_tl.from(".servicesCardCont_1 .col-12", {
+    y: 90,
+    opacity: 0,
+    duration: 0.75,
+    stagger: 0.3,
+    ease: "power2.out"
+});
+
+heading_tl.from(".servicesCardCont_2 .col-12", {
+    y: 90,
+    opacity: 0,
+    duration: 0.75,
+    stagger: 0.3,
+    ease: "power2.out"
+});
+
+// contact 
+var heading_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#contact",
+        start: "top 30%",
+    }
+});
+
+heading_tl.from("#contact .title_badge", {
+    scale: 0,
+    duration: 0.3,
+    ease: "back.out"
+});
+
+heading_tl.from("#contact .sectionHeading", {
+    x: -250,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out"
+});
+
+heading_tl.from("#contact .formSection .formItem", {
+    y: 60,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.3
+});
+
+
+// footer 
+var heading_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#footer",
+        start: "top 30%",
+    }
+});
+
+heading_tl.from(".footer_heading span", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    stagger: 0.15,
+});
+
+heading_tl.from("#scrollBtnCont", {
+    scale: 0,
+    duration: 0.3,
+    ease: "back.out"
+}, "0.75");
+
+heading_tl.from(".contactSection .contactSecItem", {
+    opacity: 0,
+    x: -150,
     duration: 0.6,
     stagger: 0.3,
-    ScrollTrigger: {
-        trigger: "#about",
+    ease: 'back.out'
+},"0.5");
 
-    }
-})
+heading_tl.from(".subscribeSection .subscribeSecItem", {
+    opacity: 0,
+    x: 250,
+    duration: 0.6,
+    stagger: 0.3,
+    ease: 'back.out'
+});
+
+heading_tl.from(".footerSocialCont .footerSocialItems", {
+    opacity: 0,
+    scale: 0,
+    duration: 0.6,
+    stagger: 0.2,
+    ease: 'back.out'
+});
+
+heading_tl.from(".copyrightText", {
+    y: 50,
+    opacity: 0,
+    duration: 0.5,
+});
